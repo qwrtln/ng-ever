@@ -1,16 +1,21 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import { Note } from './model/note';
 
 @Injectable({
   providedIn: 'root'
 })
-export class NoteService {
+export class NoteService implements OnInit {
 
   notes: Array<Note> = [
     new Note('Hakatą', 'Szewa', 'co to jest', 'dzisiaj'),
     new Note('PKP', 'Konduktor', 'bileciki do kontroli', 'jutro') 
-  ]
+  ];
+
   currentNote: Note;
+
+  ngOnInit(): void {
+    this.currentNote = this.notes[0];
+  }
 
   constructor() { }
 

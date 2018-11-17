@@ -1,12 +1,19 @@
-<p>
-  Ałtor: {{note.author}}
-</p>
+<div *ngIf="note; else dupa">
+  <p>
+    Ałtor: {{note.author}}
+  </p>
 
-<p>
-  Kątęt: {{note.content}}
-</p>
+  <p>
+    <mat-form-field>
+      <textarea type="text" matInput placeholder="Kątent" [(ngModel)]="note.content">DUpa</textarea>
+    </mat-form-field>
+  </p>
 
-<p>
-  Data: {{note.date}}
-</p>
+  <p>
+    Data: {{note.date}}
+  </p>
 
+</div>
+<ng-template #dupa>
+  Dupa panie
+</ng-template>
