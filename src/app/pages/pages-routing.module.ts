@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from '../layout/layout.component';
-import {NotepadModule} from './notepad/notepad.module';
-import {NotepadComponent} from './notepad/notepad/notepad.component';
 
 const routes: Routes = [
   {path: 'note-selector', loadChildren: './note-selector/note-selector.module#NoteSelectorModule'},
@@ -13,7 +10,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class PagesRoutingModule { }
