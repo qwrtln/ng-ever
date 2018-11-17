@@ -1,9 +1,8 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
-  <mat-drawer #drawer [mode]="side">
-    <button routerLink="/note-selector" (click)="drawer.toggle()">Select note</button>
-    <button routerLink="/notepad" (click)="drawer.toggle()">Notepad</button>
+  <mat-drawer #drawer [mode]="side" style="height: 100vh;">
+    <ever-notes-menu></ever-notes-menu>
   </mat-drawer>
-  <mat-drawer-content>
+  <mat-drawer-content style="height: 100vh;">
     <button mat-raised-button (click)="drawer.toggle()">Lista notatek</button>
     <router-outlet></router-outlet>
   </mat-drawer-content>

@@ -5,6 +5,7 @@ import {MatSidenavModule, MatInputModule, MatSelectModule} from '@angular/materi
 import {FormsModule} from '@angular/forms';
 import { PagesModule } from '../pages/pages.module';
 import { LayoutRoutingModule } from './layout-routing.module';
+import {MenuModule} from './menu/menu.module';
 
 @NgModule({
   declarations: [LayoutComponent],
@@ -15,7 +16,8 @@ import { LayoutRoutingModule } from './layout-routing.module';
     MatInputModule,
     MatSelectModule,
     MatSidenavModule,
-    PagesModule
+    PagesModule,
+    MenuModule
   ],
   exports: [
     LayoutComponent
