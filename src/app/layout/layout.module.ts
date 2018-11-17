@@ -4,17 +4,17 @@ import {CommonModule} from '@angular/common';
 import {HelloComponent} from './hello/hello.component';
 import {MatSidenavModule, MatInputModule, MatSelectModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
-import {LayoutRoutingModule} from './layout-routing.module';
+import { PagesModule } from '../pages/pages.module';
 
 @NgModule({
   declarations: [LayoutComponent, HelloComponent],
   imports: [
-    LayoutRoutingModule,
     CommonModule,
     FormsModule,
     MatInputModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    PagesModule
   ],
   exports: [
     LayoutComponent
