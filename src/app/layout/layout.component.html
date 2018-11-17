@@ -1,18 +1,10 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop.value">
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
   <mat-drawer #drawer [mode]="side">
     <button routerLink="/note-selector" (click)="drawer.toggle()">Select note</button>
     <button routerLink="/notepad" (click)="drawer.toggle()">Notepad</button>
   </mat-drawer>
   <mat-drawer-content>
-    <mat-form-field>
-      <mat-label>Has backdrop</mat-label>
-      <mat-select #hasBackdrop>
-        <mat-option>Unset</mat-option>
-        <mat-option [value]="true">True</mat-option>
-        <mat-option [value]="false">False</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+    <button mat-raised-button (click)="drawer.toggle()">Lista notatek</button>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
