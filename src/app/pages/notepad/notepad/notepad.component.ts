@@ -10,11 +10,15 @@ import { NoteService } from 'src/app/shared/note.service';
 export class NotepadComponent implements OnInit {
 
   note: Note;
+  noteId: string;
 
   constructor(private noteService: NoteService) { }
 
   ngOnInit() {
     this.note = this.noteService.getCurrentNote();
+    this.noteService.noteSelected.subscribe(note => {
+      this.note = note;
+    });
   }
-
+  
 }

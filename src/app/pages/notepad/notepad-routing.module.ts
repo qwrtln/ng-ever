@@ -4,6 +4,7 @@ import {NotepadComponent} from './notepad/notepad.component';
 
 const routes: Routes = [
   {path: '', component: NotepadComponent},
+  {path: ':id', component: NotepadComponent}
 ];
 
 @NgModule({

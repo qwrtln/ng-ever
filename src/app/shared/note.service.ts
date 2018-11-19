@@ -1,5 +1,6 @@
 import {Injectable, OnInit} from '@angular/core';
 import { Note } from './model/note';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,8 @@ export class NoteService implements OnInit {
   ];
 
   currentNote: Note;
+
+  noteSelected = new Subject<Note>();
 
   ngOnInit(): void {
     this.currentNote = this.notes[0];
@@ -33,6 +36,7 @@ export class NoteService implements OnInit {
 
   setCurrentNote(note: Note): void {
     this.currentNote = note;
+    this.noteSelected.next(note);
   }
 
   addNote(note: Note): void {
