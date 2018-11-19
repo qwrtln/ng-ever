@@ -1,6 +1,6 @@
 <mat-drawer-container class="example-container" [hasBackdrop]="true">
   <mat-drawer #drawer [mode]="side" style="height: 100vh;">
-    <ever-notes-menu></ever-notes-menu>
+    <ever-notes-menu (chosen)="drawer.toggle()"></ever-notes-menu>
   </mat-drawer>
   <mat-drawer-content style="height: 100vh;">
     <button mat-raised-button (click)="drawer.toggle()">Lista notatek</button>

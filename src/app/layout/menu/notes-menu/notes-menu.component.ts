@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import {Note} from '../../../shared/model/note';
 import {NoteService} from '../../../shared/note.service';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ever-notes-menu',
@@ -10,6 +11,7 @@ import {NoteService} from '../../../shared/note.service';
 export class NotesMenuComponent implements OnInit {
 
   notes: Array<Note>;
+  @Output() chosen: EventEmitter<any> = new EventEmitter();
 
   constructor(private noteService: NoteService) { }
 
@@ -19,5 +21,6 @@ export class NotesMenuComponent implements OnInit {
 
   onSelectNote(note: Note): void {
     this.noteService.setCurrentNote(note);
+    this.chosen.emit(null);
   }
 }
