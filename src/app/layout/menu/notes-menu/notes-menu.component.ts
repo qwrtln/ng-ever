@@ -23,4 +23,11 @@ export class NotesMenuComponent implements OnInit {
     this.noteService.setCurrentNote(note);
     this.chosen.emit(null);
   }
+
+  onAddNote(): void {
+    const note = new Note();
+    this.noteService.addNote(note);
+    this.noteService.setCurrentNote(note);
+    this.chosen.emit(null);
+  }
 }

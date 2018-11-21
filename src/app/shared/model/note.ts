@@ -7,7 +7,7 @@ export class Note {
   created: string;
   id: string;
 
-  constructor(title: string, author: string, content: string, created: string) {
+  constructor(title?: string, author?: string, content?: string, created?: string) {
     this.title = title;
     this.author = author;
     this.content = content;

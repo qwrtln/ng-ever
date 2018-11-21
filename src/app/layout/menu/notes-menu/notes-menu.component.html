@@ -1,3 +1,4 @@
+<button (click)="onAddNote()">Add note</button>
 <div *ngFor="let note of notes">
   <p>{{note.title}}</p>
   <button (click)="onSelectNote(note)">Edit</button>
