@@ -1,9 +1,11 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
-  <mat-drawer #drawer [mode]="side" style="height: 100vh;">
+<mat-drawer-container [hasBackdrop]="false">
+  <mat-drawer #drawer mode="push" style="height: 150vh;">
     <ever-notes-menu (chosen)="drawer.toggle()"></ever-notes-menu>
   </mat-drawer>
   <mat-drawer-content style="height: 100vh;">
-    <button mat-raised-button (click)="drawer.toggle()">Lista notatek</button>
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>dehaze</mat-icon>
+    </button>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
