@@ -2,6 +2,10 @@
   <mat-icon>add_circle</mat-icon>
 </button>
 <div *ngFor="let note of notes">
-  <p>{{note.title}}</p>
-  <button (click)="onSelectNote(note)">Edit</button>
+  <span>
+    <span>{{note.title}}</span>
+    <button mat-icon-button color="accent" (click)="onSelectNote(note)">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </span>
 </div>
