@@ -1,9 +1,9 @@
 <mat-drawer-container [hasBackdrop]="false">
   <mat-drawer #drawer mode="push" style="height: 150vh;">
-    <ever-notes-menu (chosen)="drawer.toggle()"></ever-notes-menu>
+    <ever-notes-menu (chosen)="drawer.close()"></ever-notes-menu>
   </mat-drawer>
   <mat-drawer-content style="height: 100vh;">
-    <button mat-icon-button (click)="drawer.toggle()">
+    <button *ngIf="!drawer.opened" mat-icon-button (click)="drawer.open()">
       <mat-icon>dehaze</mat-icon>
     </button>
     <router-outlet></router-outlet>
