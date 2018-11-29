@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Note } from 'src/app/shared/model/note';
-import { NoteService } from 'src/app/shared/note.service';
+import { Note } from '../../../shared/model/note';
+import { NoteService } from '../../../shared/note.service';
 
 @Component({
   selector: 'ever-notepad',
