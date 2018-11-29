@@ -5,18 +5,18 @@
 
   <p>
     <mat-form-field>
-      <input type="text" matInput placeholder="Tytuł" [(ngModel)]="note.title" (ngModelChange)="updateDate($event)" width="500px">
+      <input type="text" matInput placeholder="Tytuł" [(ngModel)]="note.title" (ngModelChange)="updateTime()" width="500px">
     </mat-form-field>
   </p>
 
   <p>
     <mat-form-field>
-      <textarea type="text" matInput placeholder="Kątent" [(ngModel)]="note.content" (ngModelChange)="updateDate($event)" width="500px"></textarea>
+      <textarea type="text" matInput placeholder="Kątent" [(ngModel)]="note.content" (ngModelChange)="updateTime()"></textarea>
     </mat-form-field>
   </p>
 
   <p>
-    Data: {{note.date}}
+    Było aktualne: {{note.updated | date: 'fullTime' }}
   </p>
 
 </div>

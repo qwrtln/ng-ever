@@ -10,7 +10,6 @@ import { NoteService } from 'src/app/shared/note.service';
 export class NotepadComponent implements OnInit {
 
   note: Note;
-  noteId: string;
 
   constructor(private noteService: NoteService) { }
 
@@ -21,8 +20,7 @@ export class NotepadComponent implements OnInit {
     });
   }
 
-  updateDate(event) {
-    console.log(event)
-    this.note.created = new Date().toLocaleDateString();
+  updateTime() {
+    this.note.updated = new Date();
   }
 }

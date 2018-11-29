@@ -5,7 +5,7 @@ import { NoteService } from './note.service';
 describe('NoteService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
+  it('should be updated', () => {
     const service: NoteService = TestBed.get(NoteService);
     expect(service).toBeTruthy();
   });
