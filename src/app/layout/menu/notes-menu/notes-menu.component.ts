@@ -30,4 +30,8 @@ export class NotesMenuComponent implements OnInit {
     this.noteService.setCurrentNote(note);
     this.chosen.emit(null);
   }
+
+  onCloseMenu(): void {
+    this.chosen.emit(null);
+  }
 }
