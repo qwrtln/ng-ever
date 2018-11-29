@@ -20,5 +20,9 @@ export class NotepadComponent implements OnInit {
       this.note = note;
     });
   }
-  
+
+  updateDate(event) {
+    console.log(event)
+    this.note.created = new Date().toLocaleDateString();
+  }
 }
