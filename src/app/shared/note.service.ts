@@ -8,8 +8,8 @@ import { Subject } from 'rxjs';
 export class NoteService implements OnInit {
 
   notes: Array<Note> = [
-    new Note('Hakatą', 'Szewa', 'co to jest', 'dzisiaj'),
-    new Note('PKP', 'Konduktor', 'bileciki do kontroli', 'jutro') 
+    new Note('Hakatą', 'Szewa', 'co to jest'),
+    new Note('PKP', 'Konduktor', 'bileciki do kontroli')
   ];
 
   currentNote: Note;
