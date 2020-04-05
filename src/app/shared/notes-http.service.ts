@@ -8,8 +8,8 @@ import { Note } from './model/note';
 export class NotesHttpService {
 
   constructor(private httpClient: HttpClient) { }
-  
+
   postNotes(notes: Array<Note>) {
-    console.log('Do nienawiści do fajerbejsa');
+    console.log('Do fajerbejsa');
   }
 }
